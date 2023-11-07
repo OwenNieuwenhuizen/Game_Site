@@ -1,7 +1,36 @@
+
 body {
-    background-color: aquamarine;
+    background-color: #2F697C;
+    margin: 0%;
+}
+main {
+    margin-left: 70px;
+    margin-right: 70px;
 }
 h1 {
-    color: red;
+    color: #ff0000;
+    background-color: #000000;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 60pt;
+}
+h2 {
+    color: #BD00FF;
     background-color: black;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 50pt;
+}
+h3 {
+    color: #BD00FF;
+    text-align: left;
+    font-size: 40pt;
+}
+p {
+    color: white;
+    text-align: left;
+    margin-right: 643px;
+    font-size: 25pt;
 }
