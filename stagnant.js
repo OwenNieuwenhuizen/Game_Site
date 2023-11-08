@@ -1,7 +1,7 @@
-// window.onscroll = function(){myFuntion()};
+window.onscroll = function(){myScroll()};
 const header = document.getElementById("myHead");
 const sticky = header.offsetTop;
-function myFuntion() {
+function myScroll() {
     if(window.scrollY >= sticky) {
         header.classList.add("sticky");
     }
