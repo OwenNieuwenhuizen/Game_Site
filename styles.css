@@ -7,6 +7,18 @@
     background-color: #000000;
     color: #000000;
 }
+.rowH {
+    display:flex;
+}
+.columnLH {
+    margin-left: 50px;
+    width:20%;
+    padding-top: 50px;
+}
+.columnRH {
+    margin-right: 70px;
+    width:60%
+}
 h1 {
     color: #ff0000;
     background-color: #000000;
