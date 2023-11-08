@@ -1,4 +1,19 @@
 
+.header {
+    position: sticky;
+    top: 0;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #000000;
+    color: #000000;
+}
+h1 {
+    color: #ff0000;
+    background-color: #000000;
+    text-align: center;
+    font-size: 60pt;
+    font-family:'Times New Roman', Times, serif;
+}
 body {
     background-color: #2F697C;
     margin: 0%;
@@ -6,15 +21,9 @@ body {
 main {
     margin-left: 70px;
     margin-right: 70px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-h1 {
-    color: #ff0000;
-    background-color: #000000;
-    text-align: center;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    font-size: 60pt;
-}
+
 h2 {
     color: #BD00FF;
     background-color: black;
@@ -31,6 +40,19 @@ h3 {
 p {
     color: white;
     text-align: left;
-    margin-right: 643px;
     font-size: 25pt;
+}
+.row {
+    display: flex;
+}
+.column1 {
+    text-align: left;
+    width: 56%;
+    padding-right: 40px;
+}
+.column2 {
+    width: 41%;
+    right: 0%;
+    padding-top: 40px;
+    justify-self: end;
 }
