@@ -16,7 +16,7 @@
 }
 .columnRH {
     margin-right: 70px;
-    width:60%
+    width:55%
 }
 h1 {
     color: #ff0000;
@@ -63,7 +63,44 @@ p {
 }
 .column2 {
     width: 41%;
-    right: 0%;
     padding-top: 40px;
-    justify-self: end;
+}
+h6 {
+    color: white;
+    text-align: left;
+    font-size: 15pt;
+    
+}
+iframe {
+    align-content: center;
+    padding-left: 35%;
+}
+footer {
+    background-color: #000000;
+}
+.rowF {
+    display: flex;
+    width: 100%;
+    margin: 70px;
+    margin-bottom: 0%;
+}
+.columnLF {
+    width: 60%;
+    padding-top: 20px;
+    padding-left: 0px;
+}
+.columnMF {
+    width: 40%;
+    padding-left: 7%;
+}
+h4 {
+    color:#ff0000;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30pt;
+}
+.columnRF {
+    width: 30%;
+    padding: 0%;
+    padding-top: 55px;
+    padding-left: 4%;
 }

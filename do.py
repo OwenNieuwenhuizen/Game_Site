@@ -1,10 +1,19 @@
 import turtle
 turtle.bgcolor('black')
 t=turtle.Turtle()
-colors = ['red','dark red']
+colorR = ['red','dark red']
+colorB = ['blue','dark blue']
+colorG = ['green','dark green']
+colors = [colorR,colorB,colorG]
 turtle.speed(10)
-for number in range(400) :
-    t.forward(number+1)
-    t.right(89)
-    t.pencolor(colors[number%2])
+for color in colors:
+    for number in range(400) :
+        t.forward(number+1)
+        t.right(89)
+        t.pencolor(color[number%2])
+    t.penup
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+    t.pendown
 turtle.done()
