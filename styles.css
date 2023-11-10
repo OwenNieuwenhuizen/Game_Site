@@ -108,4 +108,13 @@ h4 {
 }
 button:hover {
     opacity: 70%;
+    text-transform: unset;
+}
+.canvas {
+    display: contents;
+}
+.game2 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }

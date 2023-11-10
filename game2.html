@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description"content="page2">
-        <title>Owen's Game Website</title>
+        <title>Game 1 Page</title>
         <link rel="stylesheet" href="styles.css">
-        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     </head>
     <body>
         <div class="header" id="myHead">
@@ -19,7 +18,7 @@
             </div>
         </div>
         <main>
-            <h2>Python Spiral</h2>
+            <h2>Game Description</h2>
             <div class="row">
                 <div class="column1">
                     <p>This first game was written in Python using turtle. This draws an image with the pen tool in turtle. 
@@ -29,9 +28,15 @@
                         it is not interactive. Click on the picure to see it run!</p>
                 </div>
                 <div class="column2">
-                    <iframe src="https://trinket.io/embed/python/9644366974?outputOnly=true&runOption=run&start=result" width="50%" height="356" frameborder="0" marginwidth="0" marginheight="0" ></iframe>
+                    <button onclick="startGame()" style="padding: right 20px;">Start</button>
+                    <button onclick="endGame()">Clear</button>
+                    <br>
+                    <div class="game2" id="game"></div>
+                    <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+                    <h6>Use the ACCELERATE button to stay in the air. How long can you stay alive? Clear before starting.</h6>
                 </div>
             </div>
+            <script src="game2.js"></script>
         </main>
         <footer>
             <div class="rowF">
@@ -46,5 +51,5 @@
                 </div>
             </div>
         </footer>
-    </body>
+</body>
 </html>
