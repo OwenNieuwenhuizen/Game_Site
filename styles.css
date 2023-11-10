@@ -28,6 +28,7 @@ h1 {
 body {
     background-color: #2F697C;
     margin: 0%;
+    overflow-x: hidden;
 }
 main {
     margin-left: 70px;
@@ -55,6 +56,7 @@ p {
 }
 .row {
     display: flex;
+    padding-bottom: 35px;
 }
 .column1 {
     text-align: left;
@@ -63,7 +65,7 @@ p {
 }
 .column2 {
     width: 41%;
-    padding-top: 40px;
+    padding-top: 43px;
 }
 h6 {
     color: white;
@@ -103,4 +105,7 @@ h4 {
     padding: 0%;
     padding-top: 55px;
     padding-left: 4%;
+}
+button:hover {
+    opacity: 70%;
 }
