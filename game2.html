@@ -27,16 +27,18 @@
                         which is why it gets larger as it goes. Unfortunately, this is less of a game and more of a cool thing to look at since 
                         it is not interactive. Click on the picure to see it run!</p>
                 </div>
-                <div class="column2">
-                    <button onclick="startGame()" style="padding: right 20px;">Start</button>
-                    <button onclick="endGame()">Clear</button>
+                <div class="column2G2">
+                    <!-- <button onclick="startGame()" style="padding: right 20px;">Start</button>
+                    <button onclick="endGame()">Clear</button> -->
                     <br>
-                    <div class="game2" id="game"></div>
+                    <canvas id="game"></canvas>
+                    <button onclick="startGame()">Start</button>
+                    <button onclick="endGame()">Clear</button>
                     <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-                    <h6>Use the ACCELERATE button to stay in the air. How long can you stay alive? Clear before starting.</h6>
+                    <h6><br><br><br><br>Use the ACCELERATE button to stay in the air. How long can you stay alive? Clear before starting.</h6>
                 </div>
             </div>
-            <script src="game2.js"></script>
+            
         </main>
         <footer>
             <div class="rowF">
@@ -51,5 +53,7 @@
                 </div>
             </div>
         </footer>
+        
+        <script src="game2.js"></script>
 </body>
 </html>
