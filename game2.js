@@ -3,19 +3,22 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(30, 30, "black", 10, 120);
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
 
-function endGame() {
+function restartGame() {
+    myGameArea.stop();
+    myGamePiece = null;
+    myObstacles = [];
+    myScore = null;
     myGameArea.clear();
 }
 
 var myGameArea = {
     canvas : document.getElementById("game"),
-    
     start : function() {
         this.canvas.width = 780;
         this.canvas.height = 270;
@@ -26,6 +29,18 @@ var myGameArea = {
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        for (var i = 0; i < myObstacles.length; i++) {
+            var obj = myObstacles[i];
+            var element = document.getElementById(obj.id);
+
+            // Check if the element exists before trying to remove it
+            if (element) {
+                element.parentNode.removeChild(element);
+            }
+        }
+    },
+    stop: function() {
+        clearInterval(this.interval);
     }
 }
 
@@ -41,6 +56,7 @@ function component(width, height, color, x, y, type) {
     this.y = y;
     this.gravity = 0;
     this.gravitySpeed = 0;
+    this.id = "";
     this.update = function() {
         ctx = myGameArea.context;
         if (this.type == "text") {
@@ -100,6 +116,7 @@ function updateGameArea() {
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.id = "obstacle"+this.frameNo;
         myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
