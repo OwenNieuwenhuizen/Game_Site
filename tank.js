@@ -1,10 +1,13 @@
-var myGamePiece;
 var myObstacles = [];
 var myScore;
 var tankTop;
 var tankBottom;
 var tankGun;
 var tankTred;
+var shots = [];
+var upP = false;
+var downP = false;
+var setShot = [];
 
 // main.js
 
@@ -13,19 +16,43 @@ function startGame() {
     tankBottom = new component(250,80,"green",0,170);
     tankGun = new component(60,10,"black",200,150);
     tankTred = new component(230,20,"grey",10,250);
-    myGamePiece = new component(30,30,"red",10,240);
-    myGamePiece.gravity = 0;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-  
     myGameArea.start();
 }
 
 function restartGame() {
     myGameArea.stop();
-    myGamePiece = null;
     myObstacles = [];
     myScore = null;
+    shots = [];
     myGameArea.clear();
+}
+function takeShot() {
+    shots.push(new component(10,10,"purple",270,150));
+}
+
+function shotUp() {
+    for(i=0;i<shots.length;i+=1) {
+        shots[i].y += -1;
+        shots[i].update();
+    }
+}
+function upPressed(upP) {
+    this.upP = upP;
+}
+function shotDown() {
+    for(i=0;i<shots.length;i+=1) {
+        shots[i].y += 1;
+        shots[i].update();
+    }
+}
+function downPressed(downP) {
+    this.downP = downP;
+}
+
+function set() {
+    setShot.push(shots[0]);
+    shots.splice(1,1);
 }
 
 var myGameArea = {
@@ -112,10 +139,7 @@ function component(width, height, color, x, y, type) {
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            return;
-        } 
-        if(tankGun.crashWith(myObstacles[i]) || tankBottom.crashWith(myObstacles[i])) {
+        if(tankGun.crashWith(myObstacles[i]) || tankBottom.crashWith(myObstacles[i]) || tankTop.crashWith(myObstacles[i]) || tankTred.crashWith(myObstacles[i])) {
             return;
         }
     }
@@ -137,13 +161,31 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
+    for(i=0;i<shots.length;i+=1) {
+        shots[i].x += 1;
+        shots[i].update();
+    }
+    for(i=0;i<setShot.length;i+=1) {
+        setShot[i].x += 1;
+        setShot[i].update();
+    }
+    for(let j=0;j<myObstacles.length;j+=1) {
+        for(let i=0;i<shots.length;i+=1) {
+            if(shots[i].crashWith(myObstacles[j])) {
+                shots.splice(i,1);
+                myObstacles.splice(j,1);
+            }
+        }
+    }
+    if(upP) {
+        shotUp();
+    }
+    if(downP) {
+        shotDown();
+    }
     myScore.text="SCORE: " + myGameArea.frameNo;
     
     myScore.update();
-    
-    myGamePiece.newPos();
-    myGamePiece.update();
-    tankBottom.newPos();
     tankBottom.update();
     tankTop.update();
     tankGun.update();
@@ -154,8 +196,4 @@ function updateGameArea() {
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;
-}
-
-function accelerate(n) {
-    myGamePiece.gravity = n;
 }

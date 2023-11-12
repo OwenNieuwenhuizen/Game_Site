@@ -35,8 +35,13 @@
                     <canvas id="game"></canvas>
                     <button onclick="startGame()">Start</button>
                     <button onclick="restartGame()">Reset</button>
-                    <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-                    <h6><br><br><br><br>Use the ACCELERATE button to stay in the air. How long can you stay alive? To play again, reset, and the start.</h6>
+                    <button onclick="takeShot()">Shoot</button>
+                    <button onmousedown="upPressed(true)" onmouseup="upPressed(false)">Up</button>
+                    <button onmousedown="downPressed(true)" onmouseup="downPressed(false)">Down</button>
+                    <!-- <button onclick="set()">Set Shot</button> -->
+                    <h6><br><br><br><br>Use the SHOOT button to shoot a blast from your tank and use the UP and DOWN buttons to direct 
+                        your shot. When your shot hits a red wall, both the shot and the wall will disapear. Don't let your tank hit 
+                        a wall! To play again, press the RESET button, and then press START.</h6>
                 </div>
             </div>
             
