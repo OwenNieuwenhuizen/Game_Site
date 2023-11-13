@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="description" content="Game">
         <title>Owen's Game Website</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css" id="lightM">
+        <link rel="stylesheet" href="darkMode.css" id="darkM" disabled>
     </head>
     <body>
         <div class="header" id="myHead">
@@ -15,12 +16,15 @@
                         <div class="sellectM">
                             <a href="page2.html"><b>Spiral</b></a>
                             <a href="game2.html"><b>Flappy Bird</b></a>
-                            <a href="tank.html"><b>Tank - <i>Under Construction</i></b></a>
+                            <a href="tank.html"><b>Tank</i></b></a>
                         </div>
                     </div> 
                 </div>
-                <div class="columnRH">
+                <div class="columnMH">
                     <h1>Owen's Game Website</h1> 
+                </div>
+                <div class="columnRH">
+                    <button class="hDrop" id="theme-toggle"><img src="Logo.png" alt="LogoR" width="100px" height="100px"></button>
                 </div>
             </div>
         </div>
@@ -110,5 +114,6 @@
                 </div>
             </div>
         </footer>
+        <script src="colorMode.js"></script>
     </body>
 </html>

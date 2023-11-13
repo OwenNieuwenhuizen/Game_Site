@@ -1,4 +1,3 @@
-
 .header {
     position: sticky;
     top: 0;
@@ -62,9 +61,10 @@ h1 {
 }
 body {
     margin: 0%;
-    background-color: dimgrey;
+    background-color: #2F697C;
     overflow-x: hidden;
 }
+
 main {
     margin-left: 70px;
     margin-right: 70px;
@@ -80,7 +80,7 @@ h2 {
     font-size: 50pt;
 }
 h3 {
-    color: #ffffff;
+    color: #BD00FF;
     text-align: left;
     font-size: 40pt;
 }
