@@ -12,9 +12,9 @@ var setShot = [];
 // main.js
 
 function startGame() {
-    tankTop = new component(150,30,"grey",50,140);
+    tankTop = new component(150,30,"black",50,140);
     tankBottom = new component(250,80,"green",0,170);
-    tankGun = new component(60,10,"grey",200,150);
+    tankGun = new component(60,10,"black",200,150);
     tankTred = new component(230,20,"grey",10,250);
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
