@@ -4,17 +4,27 @@
         <meta charset="UTF-8">
         <meta name="description"content="page2">
         <title>Owen's Game Website</title>
-        <link rel="stylesheet" href="styles.css">
-        
+        <link rel="stylesheet" href="styles.css" id="lightM">
+        <link rel="stylesheet" href="darkMode.css" id="darkM" disabled>
     </head>
     <body>
         <div class="header" id="myHead">
             <div class="rowH">
-                <div class="columnLH">
-                    <a href="index.html"><img src="Logo.png" alt="Logo" width="100px" height="100px"></a>
-                </div>
                 <div class="columnMH">
-                    <h1>Owen's Game Website</h1> 
+                    <a class="home" href="index.html"><h1>Owen's Game Website</h1></a>
+                </div>
+                <div class="columnRH">
+                    <button class="hDrop" id="theme-toggle"><img src="Logo.png" alt="LogoR" width="100px" height="100px"></button>
+                </div>
+                <div class="columnLH">
+                    <div class="dropdown">
+                        <button class="hDrop"><img src="Menu.png" alt="Menu" width="100px" height="100px"></button>
+                        <div class="sellectM">
+                            <a href="page2.html"><b>Spiral</b></a>
+                            <a href="game2.html"><b>Flappy Bird</b></a>
+                            <a href="tank.html"><b>Tank</i></b></a>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -39,7 +49,7 @@
                     <button onmousedown="upPressed(true)" onmouseup="upPressed(false)">Up</button>
                     <button onmousedown="downPressed(true)" onmouseup="downPressed(false)">Down</button>
                     <!-- <button onclick="set()">Set Shot</button> -->
-                    <h6><br><br><br><br>Use the SHOOT button to shoot a blast from your tank and use the UP and DOWN buttons to direct 
+                    <h6><br><br><br><br><br><br>Use the SHOOT button to shoot a blast from your tank and use the UP and DOWN buttons to direct 
                         your shot. When your shot hits a red wall, both the shot and the wall will disapear. Don't let your tank hit 
                         a wall! To play again, press the RESET button, and then press START.</h6>
                 </div>
@@ -61,6 +71,6 @@
         </footer>
         <script src="phaser.js"></script>
         <script src="tank.js"></script>
-        
+        <script src="colorMode.js"></script>
 </body>
 </html>

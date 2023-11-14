@@ -4,17 +4,28 @@
         <meta charset="UTF-8">
         <meta name="description"content="page2">
         <title>Owen's Game Website</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css" id="lightM">
+        <link rel="stylesheet" href="darkMode.css" id="darkM" disabled>
         
     </head>
     <body>
         <div class="header" id="myHead">
             <div class="rowH">
-                <div class="columnLH">
-                    <a href="index.html"><img src="Logo.png" alt="Logo" width="100px" height="100px"></a>
-                </div>
                 <div class="columnMH">
-                    <h1>Owen's Game Website</h1> 
+                    <a class="home" href="index.html"><h1>Owen's Game Website</h1></a>
+                </div>
+                <div class="columnRH">
+                    <button class="hDrop" id="theme-toggle"><img src="Logo.png" alt="LogoR" width="100px" height="100px"></button>
+                </div>
+                <div class="columnLH">
+                    <div class="dropdown">
+                        <button class="hDrop"><img src="Menu.png" alt="Menu" width="100px" height="100px"></button>
+                        <div class="sellectM">
+                            <a href="page2.html"><b>Spiral</b></a>
+                            <a href="game2.html"><b>Flappy Bird</b></a>
+                            <a href="tank.html"><b>Tank</i></b></a>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -57,6 +68,6 @@
         </footer>
         <script src="phaser.js"></script>
         <script src="game2.js"></script>
-        
+        <script src="colorMode.js"></script>
 </body>
 </html>
