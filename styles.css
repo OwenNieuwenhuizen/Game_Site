@@ -183,3 +183,8 @@ a {
     opacity: 70%;
     background-color: dimgray;
 }
+h5 {
+    color: white;
+    text-align: left;
+    font-size: 15pt;
+}
