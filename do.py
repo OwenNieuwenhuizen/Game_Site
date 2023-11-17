@@ -1,10 +1,10 @@
 import turtle
-turtle.bgcolor('black')
+turtle.bgcolor('grey')
 t=turtle.Turtle()
 colorR = ['red','dark red']
 colorB = ['blue','dark blue']
 colorG = ['green','dark green']
-colors = [colorR,colorB,colorG]
+colors = [colorR]
 turtle.speed(10)
 for color in colors:
     for number in range(400) :
