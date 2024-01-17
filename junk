@@ -1,0 +1,9 @@
+#game {
+    position:absolute;
+    width:240px;
+    height:135px;
+    top:50%;
+    left:50%;
+    margin-top:-100px; /*half of the height*/
+    margin-left:-100px; /*half of the width*/
+}
